@@ -1,0 +1,99 @@
+# =========================
+# Terraform
+# =========================
+
+# Local .terraform directory
+.terraform/
+
+# Terraform state files (VERY IMPORTANT to ignore)
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Terraform variable files (often contain secrets)
+*.tfvars
+*.tfvars.json
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+
+# Lock file (OPTIONAL — usually commit this in production)
+# .terraform.lock.hcl
+
+
+# =========================
+# Kubernetes / EKS
+# =========================
+
+# Kubeconfig files
+kubeconfig
+*.kubeconfig
+.kube/
+
+# Helm (if you're using it)
+*.tgz
+
+
+# =========================
+# Environment / Secrets
+# =========================
+
+.env
+.env.*
+secrets.*
+*.key
+*.pem
+
+
+# =========================
+# Logs & temp files
+# =========================
+
+*.log
+logs/
+tmp/
+temp/
+
+
+# =========================
+# OS-specific files
+# =========================
+
+.DS_Store
+Thumbs.db
+
+
+# =========================
+# IDE / Editor
+# =========================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+
+# =========================
+# CI/CD (optional)
+# =========================
+
+# GitLab CI artifacts (if stored locally)
+.gitlab-ci-local/
+
+
+# =========================
+# Misc
+# =========================
+
+*.bak
+*.backup
