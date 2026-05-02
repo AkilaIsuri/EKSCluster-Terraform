@@ -24,7 +24,7 @@ resource "aws_iam_role_policy_attachment" "cluster_policy" {
 
 #Node Group IAM Role
 resource "aws_iam_role" "node_group" {
-  name_prefix            = "${var.cluster_name}-eks-node-group-role"
+  name_prefix            = "${var.cluster_name}-group-role"
   
   assume_role_policy = jsonencode({
     Version = "2012-10-17"

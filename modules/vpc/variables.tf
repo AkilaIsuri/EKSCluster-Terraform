@@ -1,56 +1,56 @@
-variable "vpc_cidr" {
-    description = "CIDR block for the VPC"
-    type        = string
-  
-}
+# VPC Module Variables
 
 variable "name_prefix" {
-    description = "Prefix for naming resources in the VPC (e.g., 'dev', 'prod') "
-    type        = string        
-  
+  description = "Prefix for resource names"
+  type        = string
 }
 
-variable "tags" {
-    description = "Tags to apply to all resources"
-    type        = map(string)
-    default     = {}
-}
-
-variable "public_subnets" {
-    description = "List of public subnet cidr blocks"
-    type        = list(string)
-}
-
-variable "private_subnets" {
-    description = "List of private subnet cidr blocks"
-    type        = list(string)
+variable "vpc_cidr" {
+  description = "CIDR block for VPC"
+  type        = string
 }
 
 variable "azs" {
-    description = "List of availability zones for subnets"
-    type        = list(string)
+  description = "List of availability zones"
+  type        = list(string)
 }
 
-variable "public_subnet_tags" {
-    description = "Additional tags for public subnets"
-    type        = map(string)
-    default     = {}
+variable "private_subnets" {
+  description = "List of private subnet CIDR blocks"
+  type        = list(string)
 }
 
-variable "private_subnet_tags" {
-    description = "Additional tags for private subnets"
-    type        = map(string)
-    default     = {}
+variable "public_subnets" {
+  description = "List of public subnet CIDR blocks"
+  type        = list(string)
 }
 
 variable "enable_nat_gateway" {
-    description = "Whether to create a NAT Gateway for private subnets"
-    type        = bool
-    default     = true
+  description = "Enable NAT Gateway for private subnets"
+  type        = bool
+  default     = true
 }
 
 variable "single_nat_gateway" {
-    description = "Use a single NAT gateway for all the private subnets."
-    type        = bool
-    default     = true
+  description = "Use a single NAT Gateway for all private subnets"
+  type        = bool
+  default     = true
+}
+
+variable "public_subnet_tags" {
+  description = "Additional tags for public subnets"
+  type        = map(string)
+  default     = {}
+}
+
+variable "private_subnet_tags" {
+  description = "Additional tags for private subnets"
+  type        = map(string)
+  default     = {}
+}
+
+variable "tags" {
+  description = "Tags to apply to all resources"
+  type        = map(string)
+  default     = {}
 }
