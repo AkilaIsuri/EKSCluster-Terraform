@@ -35,7 +35,7 @@ module "vpc" {
   tags = {
     Environment = var.environment
     Terraform   = "true"
-    Project     = "EKS-Day20"
+    Project     = "EKS-project"
   }
 }
 
@@ -48,7 +48,7 @@ module "iam" {
   tags = {
     Environment = var.environment
     Terraform   = "true"
-    Project     = "EKS-Day20"
+    Project     = "EKS-project"
   }
 }
 
@@ -90,7 +90,7 @@ module "eks" {
     }
 
     spot = {
-      instance_types = ["t3.medium", "t3a.medium"]
+      instance_types = ["t2.micro", "t3.micro"]
       desired_size   = 1
       min_size       = 1
       max_size       = 3
@@ -116,7 +116,7 @@ module "eks" {
   tags = {
     Environment = var.environment
     Terraform   = "true"
-    Project     = "EKS-Day20"
+    Project     = "EKS-project"
   }
 
   depends_on = [module.iam]
@@ -151,6 +151,6 @@ module "secrets_manager" {
   tags = {
     Environment = var.environment
     Terraform   = "true"
-    Project     = "EKS-Day20"
+    Project     = "EKS-project"
   }
 }
