@@ -73,10 +73,10 @@ module "eks" {
   # Node groups configuration
   node_groups = {
     general = {
-      instance_types = ["t3.medium"]
-      desired_size   = 2
-      min_size       = 2
-      max_size       = 4
+      instance_types = ["t3.micro"]
+      desired_size   = 1
+      min_size       = 1
+      max_size       = 1
       capacity_type  = "ON_DEMAND"
       disk_size      = 20
 
